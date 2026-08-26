@@ -48,6 +48,9 @@ python -m dailybrief --source ./notes
 
 Not: `--source` verilmezse varsayilan olarak `./notes` kullanilir.
 
+Windows kullanicilari `.exe` dosyasini Releases sayfasindan indirebilir; Python kurulumu gerekmez.
+Ilk calistirmada `ANTHROPIC_API_KEY` yoksa anahtar terminalden istenir ve `%USERPROFILE%\\.dailybrief\\config.toml` dosyasina kaydedilir.
+
 ## Demo
 
 ![DailyBrief Demo](demo.gif)
