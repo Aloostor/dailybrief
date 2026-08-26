@@ -18,6 +18,17 @@ def test_read_notes_reads_and_sorts_md_and_txt(tmp_path: Path) -> None:
     assert [note.content for note in notes] == ["first", "second"]
 
 
+def test_read_notes_reads_windows_1254_text_file(tmp_path: Path) -> None:
+    content = "Bugun oncelikli: müsteriyle görüsmeyi tamamla."
+    (tmp_path / "windows.txt").write_bytes(content.encode("cp1254"))
+
+    notes = read_notes(tmp_path)
+
+    assert len(notes) == 1
+    assert notes[0].name == "windows.txt"
+    assert notes[0].content == content
+
+
 def test_read_notes_raises_when_folder_missing(tmp_path: Path) -> None:
     missing = tmp_path / "missing"
 

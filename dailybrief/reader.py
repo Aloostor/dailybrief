@@ -35,8 +35,9 @@ def read_notes(folder_path: str | Path) -> list[Note]:
     notes: list[Note] = []
     for path in candidates:
         try:
-            content = path.read_text(encoding="utf-8")
-        except (UnicodeDecodeError, OSError) as exc:
+            raw_content = path.read_bytes()
+            content = _decode_content(raw_content)
+        except (UnicodeDecodeError, OSError, ValueError) as exc:
             warnings.warn(
                 f"Dosya okunamadi, atlandi: {path.name} ({exc})",
                 category=UserWarning,
@@ -47,3 +48,23 @@ def read_notes(folder_path: str | Path) -> list[Note]:
         notes.append(Note(name=path.name, content=content))
 
     return notes
+
+
+def _decode_content(raw_content: bytes) -> str:
+    for encoding in ("utf-8", "cp1254"):
+        try:
+            content = raw_content.decode(encoding)
+        except UnicodeDecodeError:
+            continue
+
+        if "\x00" in content:
+            raise ValueError("dosya ikili veya bozuk gorunuyor")
+        return content
+
+    raise UnicodeDecodeError(
+        "supported encodings",
+        raw_content,
+        0,
+        min(len(raw_content), 1),
+        "UTF-8 veya Windows-1254 olarak cozumlenemedi",
+    )
