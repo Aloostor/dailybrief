@@ -1,5 +1,3 @@
-
-
 # dailybrief
 
 [![Sponsor](https://img.shields.io/badge/sponsor-%E2%9D%A4-red)](https://github.com/sponsors/Aloostor)
@@ -13,41 +11,51 @@ Terminalde Rich ile baslik, tarih, brifing paneli ve kaynak dosya sayisi ile oku
 1. (Opsiyonel) Sanal ortam olusturun ve aktif edin.
 2. Bagimliliklari kurun:
 
-    pip install -r `requirements.txt`
+```bash
+pip install -r requirements.txt
+```
 
 ## Ortam Degiskeni
 
-ANTHROPIC_API_KEY zorunludur.
+`ANTHROPIC_API_KEY` zorunludur.
 
 PowerShell:
 
-    $env:ANTHROPIC_API_KEY="your_api_key"
+```powershell
+$env:ANTHROPIC_API_KEY="your_api_key"
+```
 
 cmd.exe:
 
-    set ANTHROPIC_API_KEY=your_api_key
+```bat
+set ANTHROPIC_API_KEY=your_api_key
+```
 
 bash/zsh:
 
-    export ANTHROPIC_API_KEY="your_api_key"
+```bash
+export ANTHROPIC_API_KEY="your_api_key"
+```
 
 Projede bir ornek dosya bulunur: `.env.example`
 Kendi ortam dosyanizi olusturmak icin kopyalayip degerleri doldurabilirsiniz.
 
 ## Kullanim
 
-    python -m dailybrief --source ./notes
+```bash
+python -m dailybrief --source ./notes
+```
 
-Not: --source verilmezse varsayilan olarak ./notes kullanilir.
+Not: `--source` verilmezse varsayilan olarak `./notes` kullanilir.
 
 ## Demo
 
-!DailyBrief Demo
+![DailyBrief Demo](demo.gif)
 
-Demo GIF'i yeniden uretmek icin: python `generate_demo.py`
+Demo GIF'i yeniden uretmek icin: `python scripts/generate_demo.py`
 
 VHS kurulumu: https://github.com/charmbracelet/vhs
-Demoyu yeniden olusturmak icin: vhs `demo.tape`
+Demoyu yeniden olusturmak icin: `vhs demo.tape`
 
 ## Katkida Bulunma
 
@@ -55,4 +63,4 @@ Gelistirme onerileri icin issue acabilir veya dogrudan PR gonderebilirsiniz.
 
 ## Lisans
 
-Bu proje MIT lisansi ile lisanslanmistir. Ayrintilar icin LICENSE dosyasina bakin.
+Bu proje MIT lisansi ile lisanslanmistir. Ayrintilar icin `LICENSE` dosyasina bakin.
