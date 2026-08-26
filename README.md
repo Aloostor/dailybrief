@@ -2,7 +2,7 @@
 
 # dailybrief
 
-[![Sponsor](https://img.shields.io/badge/sponsor-%E2%9D%A4-red)](https://github.com/sponsors/BURAYA_KULLANICI_ADIN)
+[![Sponsor](https://img.shields.io/badge/sponsor-%E2%9D%A4-red)](https://github.com/sponsors/Aloostor)
 
 dailybrief, bir klasordeki Markdown ve metin notlarini toplayip Anthropic API ile kisa bir gunluk brifing ureten bir Python CLI aracidir.
 Notlar Turkce ve Ingilizce karisik olsa bile icerigi analiz ederek tek bir duzenli ciktida ozetler.
