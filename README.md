@@ -54,6 +54,8 @@ Not: `--source` verilmezse varsayilan olarak `./notes` kullanilir.
 
 ![DailyBrief Demo](demo.gif)
 
+Demo GIF'i yeniden uretmek icin: `python scripts/generate_demo.py`
+
 VHS kurulumu: https://github.com/charmbracelet/vhs
 Demoyu yeniden olusturmak icin: `vhs demo.tape`
 
