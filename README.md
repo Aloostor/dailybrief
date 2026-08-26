@@ -66,4 +66,3 @@ Gelistirme onerileri icin issue acabilir veya dogrudan PR gonderebilirsiniz.
 ## Lisans
 
 Bu proje MIT lisansi ile lisanslanmistir. Ayrintilar icin `LICENSE` dosyasina bakin.
-
