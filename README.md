@@ -1,8 +1,4 @@
-Updated todo list
 
-Asagidaki icerik dogrudan kopyalanabilir:
-
-<!-- GitHub Sponsors badge placeholder: add your badge markdown here -->
 
 # dailybrief
 
